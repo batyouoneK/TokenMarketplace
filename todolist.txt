@@ -1,0 +1,7 @@
+"Make database setting's on this file's"
+payout.controller 
+admin panel deposit 
+buypayment's  
+baglan.php
+buy.controller 
+sellyourtoken.php 

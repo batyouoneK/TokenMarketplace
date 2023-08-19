@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Litecoin Paper Wallet Generator</title>
+<meta name="description" content="A lightweight, client-side, reliable, fast, open-source universal paper wallet generator supporting almost every major cryptocurrency">
+<meta name="keywords" content="minimal, reliable, fast, universal, paper, wallet, generator, offline, litecoin, ltc, cryptocurrency">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<center><body onload="generate()">
+<div id="container"><br>
+<div class="noprint"><button onclick="generate()">Generate</button>
+    <div class="noprint"><button onclick="generate1()">Generate</button>
+        <div class="noprint"><button onclick="generate2()">Generate</button>
+            <div class="noprint"><button onclick="generate3()">Generate</button>
+                <div class="noprint"><button onclick="generate4()">Generate</button>
+                    <div class="noprint"><button onclick="generate5()">Generate</button>
+                        <div class="noprint"><button onclick="generate6()">Generate</button>
+                            <div class="noprint"><button onclick="generate7()">Generate</button>
+                                <div class="noprint"><button onclick="generate8()">Generate</button>
+                                    <div class="noprint"><button onclick="generate9()">Generate</button>
+                                        <div class="noprint"><button onclick="generate10()">Generate</button>
+                                            <div class="noprint"><button onclick="generate11()">Generate</button>
+                                                <div class="noprint"><button onclick="generate12()">Generate</button>
+                                                    <div class="noprint"><button onclick="generate13()">Generate</button>
+                                                        <div class="noprint"><button onclick="generate14()">Generate</button>
+                                                            <div class="noprint"><button onclick="generate15()">Generate</button>
+                                                                <div class="noprint"><button onclick="generate16()">Generate</button>
+                                                                    <div class="noprint"><button onclick="generate17()">Generate</button>
+                                                                        <div class="noprint"><button onclick="generate18()">Generate</button>
+                                                                            <div class="noprint"><button onclick="generate19()">Generate</button>
+                                                                                <div class="noprint"><button onclick="generate20()">Generate</button>
+                                                                                    <div class="noprint"><button onclick="generate21()">Generate</button>
+                                                                                        <div class="noprint"><button onclick="generate22()">Generate</button>
+                                                                                            <div class="noprint"><button onclick="generate23()">Generate</button>
+                                                                                                <div class="noprint"><button onclick="generate24()">Generate</button>
+                                                                                                    <div class="noprint"><button onclick="generate25()">Generate</button>
+                                                                                                        <div class="noprint"><button onclick="generate26()">Generate</button>
+                                                                                                            <div class="noprint"><button onclick="generate27()">Generate</button>
+                                                                                                                 <div class="noprint"><button onclick="generate28()">Generate</button>
+                                                                                                                     <div class="noprint"><button onclick="generate29()">Generate</button>
+                                                                                                                         <div class="noprint"><button onclick="generate30()">Generate</button>
+
+
+
+<table>
+<tr><td><div id="public" style="float:left">Generating...</div>,<div id="secret" style="float:left">Generating...</div></td></tr>
+<tr><td><div id="public1" style="float:left">Generating...</div>,<div id="secret" style="float:left">Generating...</div></td></tr>
+
+<tr><td><div id="public2" style="float:left">Generating...</div>,<div id="secret" style="float:left">Generating...</div></td></tr>
+
+<tr><td><div id="public3" style="float:left">Generating...</div>,<div id="secret" style="float:left">Generating...</div></td></tr>
+
+<tr><td><div id="public4" style="float:left">Generating...</div>,<div id="secret" style="float:left">Generating...</div></td></tr>
+
+<tr><td><div id="public5" style="float:left">Generating...</div>,<div id="secret" style="float:left">Generating...</div></td></tr>
+
+<tr><td><div id="public6" style="float:left">Generating...</div>,<div id="secret" style="float:left">Generating...</div></td></tr>
+
+<tr><td><div id="public7" style="float:left">Generating...</div>,<div id="secret" style="float:left">Generating...</div></td></tr>
+
+<tr><td><div id="public8" style="float:left">Generating...</div>,<div id="secret" style="float:left">Generating...</div></td></tr>
+
+<tr><td><div id="public9" style="float:left">Generating...</div>,<div id="secret" style="float:left">Generating...</div></td></tr>
+
+<tr><td><div id="public10" style="float:left">Generating...</div>,<div id="secret10" style="float:left">Generating...</div></td></tr>
+
+
+<tr><td><div id="public11" style="float:left">Generating...</div>,<div id="secret10" style="float:left">Generating...</div></td></tr>
+
+<tr><td><div id="public12" style="float:left">Generating...</div>,<div id="secret10" style="float:left">Generating...</div></td></tr>
+
+<tr><td><div id="public13" style="float:left">Generating...</div>,<div id="secret10" style="float:left">Generating...</div></td></tr>
+
+<tr><td><div id="public14" style="float:left">Generating...</div>,<div id="secret10" style="float:left">Generating...</div></td></tr>
+
+<tr><td><div id="public15" style="float:left">Generating...</div>,<div id="secret10" style="float:left">Generating...</div></td></tr>
+
+<tr><td><div id="public16" style="float:left">Generating...</div>,<div id="secret10" style="float:left">Generating...</div></td></tr>
+
+<tr><td><div id="public17" style="float:left">Generating...</div>,<div id="secret10" style="float:left">Generating...</div></td></tr>
+
+<tr><td><div id="public18" style="float:left">Generating...</div>,<div id="secret10" style="float:left">Generating...</div></td></tr>
+
+
+
+
+<tr><td></td></tr>
+<tr><td><div id="secret_qr"></div></td></tr>
+</table>
+</div>
+<script src="js/bitcoinjs-lib.js"></script>
+<script src="js/qrcode.js"></script>
+<script>
+function generate() {
+const litecoin = bitcoin.networks.litecoin;
+const keyPair = bitcoin.ECPair.makeRandom({network:litecoin});
+const pubKey = keyPair.getAddress();
+const privKey = keyPair.toWIF();
+document.getElementById("public").textContent = pubKey + ",";
+document.getElementById("secret").textContent = privKey;
+document.getElementById("public_qr").textContent = "";
+document.getElementById("secret_qr").textContent = "";
+new QRCode(document.getElementById("public_qr"), {text: pubKey, width: 128, height: 128, correctLevel : QRCode.CorrectLevel.H});
+new QRCode(document.getElementById("secret_qr"), {text: privKey, width: 128, height: 128, correctLevel : QRCode.CorrectLevel.H});}
+document.getElementById("update").textContent = "Latest update: " + document.lastModified;
+
+
+function generate1() {
+const litecoin = bitcoin.networks.litecoin;
+const keyPair = bitcoin.ECPair.makeRandom({network:litecoin});
+const pubKey = keyPair.getAddress();
+const privKey = keyPair.toWIF();
+document.getElementById("public").textContent = pubKey + ",";
+document.getElementById("secret").textContent = privKey;
+document.getElementById("public_qr").textContent = "";
+document.getElementById("secret_qr").textContent = "";
+new QRCode(document.getElementById("public_qr"), {text: pubKey, width: 128, height: 128, correctLevel : QRCode.CorrectLevel.H});
+new QRCode(document.getElementById("secret_qr"), {text: privKey, width: 128, height: 128, correctLevel : QRCode.CorrectLevel.H});}
+document.getElementById("update").textContent = "Latest update: " + document.lastModified;
+
+
+function generate2() {
+const litecoin = bitcoin.networks.litecoin;
+const keyPair = bitcoin.ECPair.makeRandom({network:litecoin});
+const pubKey = keyPair.getAddress();
+const privKey = keyPair.toWIF();
+document.getElementById("public").textContent = pubKey + ",";
+document.getElementById("secret").textContent = privKey;
+document.getElementById("public_qr").textContent = "";
+document.getElementById("secret_qr").textContent = "";
+new QRCode(document.getElementById("public_qr"), {text: pubKey, width: 128, height: 128, correctLevel : QRCode.CorrectLevel.H});
+new QRCode(document.getElementById("secret_qr"), {text: privKey, width: 128, height: 128, correctLevel : QRCode.CorrectLevel.H});}
+document.getElementById("update").textContent = "Latest update: " + document.lastModified;
+</script>
+</body>  </center>
+</html>
